@@ -494,7 +494,7 @@ input[type='search']::-webkit-search-results-decoration {
 	display: none;
 }
 
-/* remove default webkit form field appearance */
+/* remove default browser style from form field appearance */
 
 input[type=text],
 input[type=email],
@@ -519,14 +519,6 @@ img {
  * Remove the text shadow on text selections (opinionated).
  * 1. Restore the coloring undone by defining the text shadow (opinionated).
  */
-
-::-moz-selection {
-	/* 1 */
-	background-color: var(--selection-bg-colour);
-	/* 1 */
-	color: var(--selection-colour);
-	text-shadow: none;
-}
 
 ::selection {
 	/* 1 */
