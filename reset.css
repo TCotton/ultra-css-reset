@@ -556,10 +556,11 @@ a:not([class]) {
 	text-decoration-skip-ink: auto;
 }
 
-/* Remove list styles on ul, ol elements */
+/* Remove list styles on ul, ol elements and default padding */
 ul,
 ol {
 	list-style: none;
+	padding: 0;
 }
 
 /*
