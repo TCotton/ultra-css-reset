@@ -1,0 +1,32 @@
+{
+  "name": "ultra-css-reset",
+  "version": "0.1.0",
+  "description": "Full CSS reset and SASS function/mixin conversion to postcss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TCotton/ultra-css-reset.git"
+  },
+  "keywords": [
+    "css",
+    "postcss"
+  ],
+  "author": "Andy Walpole",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TCotton/ultra-css-reset/issues"
+  },
+  "homepage": "https://github.com/TCotton/ultra-css-reset#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.6.4",
+    "postcss": "^7.0.18",
+    "postcss-functions": "^3.0.0",
+    "postcss-mixins": "^6.2.2",
+    "postcss-nested": "^4.1.2",
+    "postcss-simple-vars": "^5.0.2",
+    "postcss-typescript-css": "^0.2.1"
+  }
+}
