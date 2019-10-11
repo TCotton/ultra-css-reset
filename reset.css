@@ -675,15 +675,7 @@ Print styles
 	*:after {
 		background: transparent !important;
 		color: #000 !important;
-		/*
-	// Black prints faster:
-	// http://www.sanbeiji.com/archives/953
-	// !important is essential in print style sheet
-		 */
 		box-shadow: none !important;
-		/*
-	// !important is essential in print style sheet
-	*/
 		text-shadow: none !important;
 	}
 
@@ -693,6 +685,9 @@ Print styles
 		line-height: 2.5em;
 	}
 
+	/**
+	This will have to change depending on the markup
+	 */
 	div[id=right-small],
 	div[id=banner],
 	div[id=header],
@@ -700,31 +695,61 @@ Print styles
 		display: none;
 	}
 
+	/* main content? this has to change */
+	div[id=main-content] {
+		padding: 5px;
+		width: auto;
+		float: none;
+		display: block;
+	}
+
 	h1 {
-		font-size: 24px;
+		font-size: 18pt;
 	}
 
 	h2 {
-		font-size: 22px;
+		font-size: 17pt;
 	}
 
 	h3,
 	h4,
 	h5,
 	h6 {
-		font-size: 18px;
+		font-size: 14pt;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after: avoid;
+		page-break-inside: avoid
+	}
+
+	img {
+		page-break-inside: avoid;
+		page-break-after: avoid;
 	}
 
 	p,
 	li {
-		font-size: 16px;
+		font-size: 12pt;
 	}
 
-	div[id=main-content] {
-		padding: 5px;
-		width: auto;
-		float: none;
-		display: block;
+	ul,
+	ol,
+	dl {
+		page-break-before: avoid
+	}
+
+	@page {
+		margin: 2cm;
+	}
+
+	a {
+		page-break-inside: avoid
 	}
 
 	a,
@@ -761,8 +786,20 @@ Print styles
 // Printing Tables:
 // ttp://css-discuss.incutio.com/wiki/Printing_Tables
 	 */
+	table,
+	pre {
+		page-break-inside: avoid
+	}
+
+
 	thead {
 		display: table-header-group;
+	}
+
+	a,
+	figure,
+	blockquote {
+		page-break-inside: avoid;
 	}
 
 	tr,
@@ -771,10 +808,6 @@ Print styles
 	}
 
 	img {
-		/*
-	// !important is essential in print style sheet
-	// scss-lint:disable ImportantRule
-		 */
 		max-width: 100% !important;
 	}
 
@@ -785,10 +818,33 @@ Print styles
 		widows: 3;
 	}
 
+	h1,
 	h2,
-	h3 {
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-before: always;
 		page-break-after: avoid;
 	}
 
+	/**
+ 	* Making intergated videos disappear, and removing the iframes' whitespace to zero.
+ 	*/å
+	.entry iframe, ins {
+		display: none;
+		width: 0 !important;
+		height: 0 !important;
+		overflow: hidden !important;
+		line-height: 0 !important;
+		white-space: nowrap;
+	}
+	.embed-youtube, .embed-responsive {
+		position: absolute;
+		height: 0;
+		overflow: hidden;
+	}
+
 }
+
 /* stylelint-enable */
