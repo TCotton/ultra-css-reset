@@ -826,7 +826,7 @@ p {
 	/**
  	* Making integrated videos disappear, and removing the iframes' whitespace to zero.
  	*/
-	.entry iframe, ins {
+	.old-aspect-ratio.video-wrapper iframe iframe, ins {
 		display: none;
 		width: 0 !important;
 		height: 0 !important;
@@ -835,7 +835,7 @@ p {
 		white-space: nowrap;
 	}
 
-	.embed-youtube, .embed-responsive {
+	.old-aspect-ratio.video-wrapper {
 		position: absolute;
 		height: 0;
 		overflow: hidden;
