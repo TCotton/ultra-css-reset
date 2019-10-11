@@ -445,15 +445,13 @@ th,
 td,
 caption {
 	font-weight: normal;
-	/* just left it in the headers. Was making font less legible elsewhere */
+	/* just left it in the headers. Was making font less legible elsewhere, but better performance */
 	text-rendering: optimizeLegibility;
 	-webkit-font-kerning: normal;
 	font-kerning: normal;
 	-webkit-font-feature-settings: "liga", "kern";
 	font-feature-settings: "liga", "kern";
 }
-
-/* slight character and word gap of retina devices to make the text more legible */
 
 /* { Box-sizing: Border-box } FTW: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 
