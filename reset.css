@@ -425,6 +425,7 @@ body {
 	-webkit-font-kerning: auto;
 	font-kerning: auto;
 	scroll-behavior: smooth;
+	min-height: 100vh;
 }
 
 /* Hack that prevents the jump between scrollbar and no-scrollbar pages.
