@@ -428,14 +428,7 @@ body {
 	min-height: 100vh;
 }
 
-/* Hack that prevents the jump between scrollbar and no-scrollbar pages.
- http://aykevl.nl/2014/09/fix-jumping-scrollbar */
-
-html {
-	margin-left: calc(100vw - 100%);
-	margin-right: 0;
-}
-
+/* better quality font, but worse page performance on header elements */
 h1,
 h2,
 h3,
@@ -452,6 +445,14 @@ caption {
 	font-kerning: normal;
 	-webkit-font-feature-settings: "liga", "kern";
 	font-feature-settings: "liga", "kern";
+}
+
+/* Hack that prevents the jump between scrollbar and no-scrollbar pages.
+ http://aykevl.nl/2014/09/fix-jumping-scrollbar */
+
+html {
+	margin-left: calc(100vw - 100%);
+	margin-right: 0;
 }
 
 /* { Box-sizing: Border-box } FTW: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
@@ -551,8 +552,8 @@ a:active {
 	color: var(--link-colour);
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
+/* A elements get default styles */
+a {
 	-webkit-text-decoration-skip: ink;
 	text-decoration-skip-ink: auto;
 }
