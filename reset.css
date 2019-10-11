@@ -556,6 +556,12 @@ a:not([class]) {
 	text-decoration-skip-ink: auto;
 }
 
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+	list-style: none;
+}
+
 /*
 * Hide only visually, but have it available for screenreaders: h5bp.com/v
 */
