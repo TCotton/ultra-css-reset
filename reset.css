@@ -830,7 +830,7 @@ Print styles
 
 	/**
  	* Making intergated videos disappear, and removing the iframes' whitespace to zero.
- 	*/å
+ 	*/
 	.entry iframe, ins {
 		display: none;
 		width: 0 !important;
