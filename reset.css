@@ -328,7 +328,6 @@ textarea {
 }
 
 /**
- * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
 
@@ -596,9 +595,9 @@ ol {
 }
 
 /*
-// new aspect ration techniques here using Grid and SVG:
-// https://justmarkup.com/log/2018/03/collection-of-css-snippets
-// https://codeburst.io/keeping-aspect-ratio-with-html-and-no-padding-tricks-40705656808b
+	new aspect ration techniques here using Grid and SVG:
+	https://justmarkup.com/log/2018/03/collection-of-css-snippets
+	https://codeburst.io/keeping-aspect-ratio-with-html-and-no-padding-tricks-40705656808b
  */
 .old-aspect-ratio.video-wrapper {
 	position: relative;
@@ -617,9 +616,11 @@ ol {
 }
 
 /**
-owl lobotomy = use with caution
- */
-/* Natural flow and rhythm in articles by default */
+	owl lobotomy = use with caution
+*/
+/*
+	Natural flow and rhythm in articles by default
+*/
 article > * + * {
 	margin-top: 1em;
 }
@@ -640,9 +641,9 @@ p {
 }
 
 /*
-// Reduced motion
-// Article on this here: http://valhead.com/2017/06/23/reduced-motion-query/
-// I would recommend testing this before using it
+	Reduced motion
+	Article on this here: http://valhead.com/2017/06/23/reduced-motion-query/
+	I would recommend testing this before using it
  */
 @media (prefers-reduced-motion: reduce) {
 	* {
@@ -656,33 +657,27 @@ p {
 	}
 }
 
-/**
-Print styles
- */
 /*
-// Print styles.
-// Inlined to avoid the additional HTTP request:
+	Print styles.
+	In-lined to avoid the additional HTTP request:
  */
 @media print {
-
-	* {
-		color-adjust: economy;
-		-webkit-print-color-adjust: economy;
-	}
-
-	*,
-	*:before,
-	*:after {
-		background: transparent !important;
-		color: #000 !important;
-		box-shadow: none !important;
-		text-shadow: none !important;
-	}
 
 	body {
 		font-size: 62.5%;
 		font-family: 'Open Sans', Roboto, 'Droid Sans', 'Helvetica Neue', Helvetica, sans-serif;
 		line-height: 2.5em;
+	}
+
+	*,
+	*:before,
+	*:after {
+		color-adjust: economy;
+		-webkit-print-color-adjust: economy;
+		background: transparent !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
 	}
 
 	/**
@@ -766,8 +761,8 @@ Print styles
 	}
 
 	/*
-	// Don' t show links that are fragment identifiers,
-	//  or use the ` javascript:` pseudo protocol
+		Don't show links that are fragment identifiers,
+		or use the ` javascript:` pseudo protocol
 	 */
 	a[href^="#"]:after,
 	a[href^="javascript:"]:after {
@@ -783,8 +778,8 @@ Print styles
 	}
 
 	/*
-// Printing Tables:
-// ttp://css-discuss.incutio.com/wiki/Printing_Tables
+	Printing Tables:
+	http://css-discuss.incutio.com/wiki/Printing_Tables
 	 */
 	table,
 	pre {
@@ -829,7 +824,7 @@ Print styles
 	}
 
 	/**
- 	* Making intergated videos disappear, and removing the iframes' whitespace to zero.
+ 	* Making integrated videos disappear, and removing the iframes' whitespace to zero.
  	*/
 	.entry iframe, ins {
 		display: none;
@@ -839,12 +834,12 @@ Print styles
 		line-height: 0 !important;
 		white-space: nowrap;
 	}
+
 	.embed-youtube, .embed-responsive {
 		position: absolute;
 		height: 0;
 		overflow: hidden;
 	}
-
 }
 
 /* stylelint-enable */
